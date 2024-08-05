@@ -1,8 +1,8 @@
-# GentzkowLabTemplate
+# Repository Template
 
-<p style="font-family:courier;font-weight:900;font-size:30px">
-    GentzkowLabTemplate
-</p>
+This template is adapted from the [GentzkowLabTemplate](https://github.com/gentzkow/GentzkowLabTemplate?tab=readme-ov-file). 
+
+With time it will evolve to match my specific needs. Main changes needed: integration with GCP products (e.g., buckets for storing data and BigQuery as a relational database) and software dependency management.
 
   1. [Overview](#overview)
   2. [Requirements](#requirements)
@@ -18,7 +18,7 @@
 # Overview
 
 This template is designed to provide a simple, extendable, and
-reproducible framework that allows teams of researchers to to collaborate
+reproducible framework that allows teams of researchers to collaborate
 using multiple software tools (e.g., Python, R, Stata, Latex) across multiple 
 platforms (Linux/MacOS, Windows).
 
@@ -113,6 +113,7 @@ To use the template **without Latex**, comment out the lines beginning `run_late
 * `/2_analysis/`: Runs the analysis.
 * `/3_slides/`: Makes the slides.
 * `/4_paper/`: Makes the paper.
+* `/5_sandbox/`: In-progress code; exploratory analyses. Not a proper module. Use subfolders within for each task. 
 
 ## Modules
 
@@ -235,9 +236,7 @@ Here are some **key principles** for organizing modules:
 
 ## Working with large data/input files
 
-We find that it is a good idea to commit data/input files directly to Git whenever they are not too large. We use [Git LFS](https://git-lfs.com/) for this purpose, and we have had good experience for file sizes up to 10s of megabytes. Committing these files directly to Git means that the code and data are versioned together, that the results are guaranteed to be replicable, and that users do not have to deal with setting up and managing external dependencies.
-
-For very large data or input files, however, committing to Git is inefficient at best. In this case, the inputs should be defined as external dependencies in `user_env.sh`. The comments in `user_env.sh` should provide detail on the nature of the external files, their provenance, and how a user can locate them. If the external files are raw data, they should be documented with a `README` just like the files in `0_raw`. If the external files are produced in a different repository, they should be called in a way that records the repository and revision that produced them. 
+For large data or input files, however, committing to Git is inefficient at best. In this case, the inputs should be defined as external dependencies in `user_env.sh`. The comments in `user_env.sh` should provide detail on the nature of the external files, their provenance, and how a user can locate them. If the external files are raw data, they should be documented with a `README` just like the files in `0_raw`. If the external files are produced in a different repository, they should be called in a way that records the repository and revision that produced them. 
 
 ## Working with large output files
 
