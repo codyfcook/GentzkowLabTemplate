@@ -1,6 +1,6 @@
 # Repository Template
 
-This template is adapted from the [GentzkowLabTemplate](https://github.com/gentzkow/GentzkowLabTemplate?tab=readme-ov-file). 
+This template is adapted from the [GentzkowLabTemplate](https://github.com/gentzkow/GentzkowLabTemplate?tab=readme-ov-file). For now, see the [wiki](https://github.com/gentzkow/GentzkowLabTemplate/wiki) there for further details. 
 
 With time it will evolve to match my specific needs. Main changes needed: integration with GCP products (e.g., buckets for storing data and BigQuery as a relational database) and software dependency management.
 
